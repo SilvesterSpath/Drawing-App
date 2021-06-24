@@ -4,6 +4,7 @@ const colorEl = document.getElementById('color');
 const increase = document.getElementById('increase');
 const decrease = document.getElementById('decrease');
 const sizeEl = document.getElementById('size');
+const clear = document.getElementById('clear');
 
 console.log(colorEl.value);
 
@@ -12,6 +13,10 @@ let isPressed = false;
 let color = 'black';
 let x;
 let y;
+
+clear.addEventListener('click', () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
 
 decrease.addEventListener('click', () => {
   size--;
